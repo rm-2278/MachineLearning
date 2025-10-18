@@ -1,0 +1,11 @@
+name: ppo
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pybullet
+  - numpy=1.26.4
+  - gymnasium
+  - pip
+  - pip:
