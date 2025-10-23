@@ -10,3 +10,10 @@ With 100 epochs,
 train_loss: 2.346 -> 0.617
 valid_acc: 0.157 -> 0.857
 evaluation_acc: 0.866
+
+fashion_mnist.py:
+Uses the model for the fashion_mnist task, with 10 categories.
+With 100 epochs,
+train_loss: 2.395 -> 0.712
+valid_acc: 0.211 -> 0.769
+evaluation_acc: 0.761

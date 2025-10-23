@@ -24,7 +24,7 @@ class LogisticRegression:
             Output array, where each row sums to 1
             and represents probability distribution.
         """
-        x -= x.max(axis=1, keepdims=True)
+        x -= x.max(axis=1, keepdims=True) # Prevent exp overflow
         return np.exp(x) / np.sum(np.exp(x), axis=1, keepdims=True)
 
     def train(self, x: np.ndarray, t: np.ndarray, eps=0.1):
