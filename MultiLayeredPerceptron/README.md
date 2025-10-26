@@ -1,3 +1,4 @@
+# Multi-layered Perceptron
 Implements multi-layered perceptron with numpy.
 Uses mini-batch gradient descent for learning.
 
