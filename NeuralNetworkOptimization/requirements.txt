@@ -1,5 +1,5 @@
 numpy
 torch
 wandb
-keras
+tensorflow
 scikit-learn

@@ -6,7 +6,8 @@ To use it:
 2. source venv/bin/activate (Linux/Bash/mac)
    .\venv\Scripts\activate (Windows Command Prompt)
 3. pip install -r requirements.txt
-
+4. wandb login -> fill in api
+5. python main.py
 
 
 Improvements from previous models:
@@ -27,4 +28,11 @@ test_loss:
 train_acc:
 valid_acc:  
 test_acc: 
+
+
+TODO:
+1. Find the optimal hyperparameters using grid/random search
+2. Train for longer
+3. Make model deeper
+4. Apply to other tasks
 

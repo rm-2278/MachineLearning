@@ -56,7 +56,7 @@ def train(model: nn.Module,
         
         # Reuse evaluate function for validation
         avg_valid_loss, valid_accuracy = evaluate(
-            model, dataloader_valid, device
+            model, dataloader_valid, criterion, device
         )
             
         wandb.log({
