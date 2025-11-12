@@ -22,12 +22,17 @@ Improvements from previous models:
 fashion_mnist.py:
 Uses the model for the fashion_mnist task, with 10 categories.
 With 10 epochs,
+
 train_loss: 0.5378 -> 0.2511
+
 valid_loss: 0.3923 -> 0.2943
+
 train_acc: 0.8112 -> 0.9048
+
 valid_acc: 0.8587 -> 0.8937
 
 test_loss: 0.3320
+
 test_acc: 0.8831
 
 Private log:
