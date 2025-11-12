@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import wandb
+from torch.utils.data import DataLoader
 
 
 class MLP(nn.Module):
@@ -16,19 +17,30 @@ class MLP(nn.Module):
         x = self.fc2(x)  # Do not need softmax here as CrossEntropyLoss includes it
         return x
         
-def train(mlp, optimizer, dataloader_train, dataloader_valid, epochs):
+def train(model: nn.Module,
+          optimizer: torch.optim.Optimizer,
+          dataloader_train: DataLoader,
+          dataloader_valid: DataLoader,
+          epochs: int,
+          criterion: nn.Module,
+          device: torch.device):
+    
+    # Send model to device
+    model.to(device)
+    
     for epoch in range(epochs):
         losses_train = []
-        losses_valid = []
         train_num = 0
         train_correct = 0
-        valid_num = 0
-        valid_correct = 0
         
-        mlp.train()
+        model.train()
         for x, t in dataloader_train:
-            pred = mlp(x)
-            loss = F.cross_entropy(pred, t) # Use logits and class indices
+            # Send data to device
+            x = x.to(device)
+            t = t.to(device)
+            
+            pred = model(x)
+            loss = criterion(pred, t) # Use logits and class indices
             
             optimizer.zero_grad()
             loss.backward()
@@ -38,22 +50,14 @@ def train(mlp, optimizer, dataloader_train, dataloader_valid, epochs):
             train_correct += (pred_labels == t).sum().item()
             train_num += t.size(0)
             losses_train.append(loss.item())
-            
-        mlp.eval()
-        with torch.no_grad(): # Disable gradient calculation for validation
-            for x, t in dataloader_valid:
-                pred = mlp(x)
-                loss = F.cross_entropy(pred, t)
-                
-                pred_labels = torch.argmax(pred, dim=1)
-                valid_correct += (pred_labels == t).sum().item()
-                valid_num += t.size(0)
-                losses_valid.append(loss.item())
         
         avg_train_loss = np.mean(losses_train)
-        avg_valid_loss = np.mean(losses_valid)
         train_accuracy = train_correct / train_num
-        valid_accuracy = valid_correct / valid_num
+        
+        # Reuse evaluate function for validation
+        avg_valid_loss, valid_accuracy = evaluate(
+            model, dataloader_valid, device
+        )
             
         wandb.log({
             "epoch": epoch, 
@@ -65,28 +69,35 @@ def train(mlp, optimizer, dataloader_train, dataloader_valid, epochs):
         
         print(f"""EPOCH: {epoch+1:02}/{epochs} | 
             Train Loss: {avg_train_loss:.4f} |
-            Train Accuracy: {train_accuracy:.4f} |
             Valid Loss: {avg_valid_loss:.4f} | 
+            Train Accuracy: {train_accuracy:.4f} |
             Valid Accuracy: {valid_accuracy:.4f}""")
         
-def evaluate(model, dataloader_test):
+def evaluate(model: nn.Module,
+             dataloader_test: DataLoader,
+             criterion: nn.Module,
+             device: torch.device):
+    
     model.eval()
-    test_losses = []
-    test_num = 0
-    test_correct = 0
+    losses = []
+    num_total = 0
+    num_correct = 0
     
     with torch.no_grad():
         for x, t in dataloader_test:
+            x.to(device)
+            t.to(device)
+            
             pred = model(x)
-            loss = F.cross_entropy(pred, t)
+            loss = criterion(pred, t)
             
             pred_labels = torch.argmax(pred, dim=1)
-            test_correct += (pred_labels == t).sum().item()
-            test_num += t.size(0)
-            test_losses.append(loss.item())
+            num_correct += (pred_labels == t).sum().item()
+            num_total += t.size(0)
+            losses.append(loss.item())
     
-    avg_test_loss = np.mean(test_losses)
-    test_accuracy = test_correct / test_num
+    avg_loss = np.mean(losses)
+    accuracy = num_correct / num_total
     
-    return avg_test_loss, test_accuracy
+    return avg_loss, accuracy
     
