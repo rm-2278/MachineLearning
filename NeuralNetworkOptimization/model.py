@@ -67,6 +67,7 @@ def train(model: nn.Module,
             "val_accuracy": valid_accuracy
             })
         
+        # :02 pads the number with leading zeros to make it 2 digits
         print(f"""EPOCH: {epoch+1:02}/{epochs} | 
             Train Loss: {avg_train_loss:.4f} |
             Valid Loss: {avg_valid_loss:.4f} | 
