@@ -1,0 +1,55 @@
+Starting training...
+EPOCH: 01/10 |
+            Train Loss: 0.5378 |
+            Valid Loss: 0.3923 |
+            Train Accuracy: 0.8112 |
+            Valid Accuracy: 0.8587
+EPOCH: 02/10 |
+            Train Loss: 0.3958 |
+            Valid Loss: 0.3564 |
+            Train Accuracy: 0.8570 |
+            Valid Accuracy: 0.8713
+EPOCH: 03/10 |
+            Train Loss: 0.3550 |
+            Valid Loss: 0.3652 |
+            Train Accuracy: 0.8710 |
+            Valid Accuracy: 0.8700
+EPOCH: 04/10 |
+            Train Loss: 0.3283 |
+            Valid Loss: 0.3248 |
+            Train Accuracy: 0.8802 |
+            Valid Accuracy: 0.8798
+EPOCH: 05/10 |
+            Train Loss: 0.3083 |
+            Valid Loss: 0.3083 |
+            Train Accuracy: 0.8863 |
+            Valid Accuracy: 0.8885
+EPOCH: 06/10 |
+            Train Loss: 0.2943 |
+            Valid Loss: 0.3365 |
+            Train Accuracy: 0.8910 |
+            Valid Accuracy: 0.8760
+EPOCH: 07/10 |
+            Train Loss: 0.2804 |
+            Valid Loss: 0.3188 |
+            Train Accuracy: 0.8964 |
+            Valid Accuracy: 0.8833
+EPOCH: 08/10 |
+            Train Loss: 0.2694 |
+            Valid Loss: 0.3026 |
+            Train Accuracy: 0.9005 |
+            Valid Accuracy: 0.8915
+EPOCH: 09/10 |
+            Train Loss: 0.2610 |
+            Valid Loss: 0.2853 |
+            Train Accuracy: 0.9033 |
+            Valid Accuracy: 0.8977
+EPOCH: 10/10 |
+            Train Loss: 0.2511 |
+            Valid Loss: 0.2943 |
+            Train Accuracy: 0.9048 |
+            Valid Accuracy: 0.8937
+Training completed.
+Starting evaluation...
+
+Test loss: 0.3320 Test accuracy: 0.8831

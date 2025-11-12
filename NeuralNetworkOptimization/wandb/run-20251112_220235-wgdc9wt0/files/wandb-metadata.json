@@ -1,0 +1,28 @@
+{
+  "os": "Linux-6.8.0-1030-azure-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.1",
+  "startedAt": "2025-11-12T22:02:35.433066Z",
+  "program": "/workspaces/MachineLearning/NeuralNetworkOptimization/fashion_mnist.py",
+  "codePath": "NeuralNetworkOptimization/fashion_mnist.py",
+  "codePathLocal": "fashion_mnist.py",
+  "git": {
+    "remote": "https://github.com/rm-2278/MachineLearning",
+    "commit": "8cff144501ef3c9fc5d30ca73ce303d72d491c49"
+  },
+  "email": "rm2278@cam.ac.uk",
+  "root": "/workspaces/MachineLearning/NeuralNetworkOptimization",
+  "host": "codespaces-e200b6",
+  "executable": "/workspaces/MachineLearning/NeuralNetworkOptimization/venv/bin/python",
+  "cpu_count": 1,
+  "cpu_count_logical": 2,
+  "disk": {
+    "/": {
+      "total": "33636024320",
+      "used": "27778666496"
+    }
+  },
+  "memory": {
+    "total": "8329543680"
+  },
+  "writerId": "mkt2udricvquaxnfb4d9eksdz0nq4icg"
+}

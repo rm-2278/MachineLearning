@@ -1,0 +1,62 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            gpilj016fa7mrwm8d1sfunut7ebbzntu:
+                codePath: NeuralNetworkOptimization/fashion_mnist.py
+                codePathLocal: fashion_mnist.py
+                cpu_count: 1
+                cpu_count_logical: 2
+                disk:
+                    /:
+                        total: "33636024320"
+                        used: "27778949120"
+                email: rm2278@cam.ac.uk
+                executable: /workspaces/MachineLearning/NeuralNetworkOptimization/venv/bin/python
+                git:
+                    commit: 18502fdc8221482ec7f71eda35882cfa14e92489
+                    remote: https://github.com/rm-2278/MachineLearning
+                host: codespaces-e200b6
+                memory:
+                    total: "8329543680"
+                os: Linux-6.8.0-1030-azure-x86_64-with-glibc2.39
+                program: /workspaces/MachineLearning/NeuralNetworkOptimization/fashion_mnist.py
+                python: CPython 3.12.1
+                root: /workspaces/MachineLearning/NeuralNetworkOptimization
+                startedAt: "2025-11-12T22:03:21.125531Z"
+                writerId: gpilj016fa7mrwm8d1sfunut7ebbzntu
+        m: []
+        python_version: 3.12.1
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 53
+            "2":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 53
+            "3":
+                - 1
+                - 2
+                - 16
+            "4": 3.12.1
+            "5": 0.23.0
+            "12": 0.23.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+epochs:
+    value: 10
+hidden_dim:
+    value: 128
+in_dim:
+    value: 784
+learning_rate:
+    value: 0.001
+out_dim:
+    value: 10
