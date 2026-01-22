@@ -1,15 +1,15 @@
-# 🧠 Machine Learning Portfolio
+# Machine Learning Practicing
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-Latest-red.svg)](https://pytorch.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-Latest-orange.svg)](https://numpy.org/)
 
-A comprehensive collection of machine learning and deep learning implementations, demonstrating proficiency in both classical ML algorithms and modern deep learning architectures. All implementations are built from scratch or using fundamental frameworks like NumPy, PyTorch, and TensorFlow.
+A comprehensive collection of machine learning and deep learning implementations, both classical ML algorithms and modern deep learning architectures. All implementations are built from scratch or using fundamental frameworks like NumPy, PyTorch, and TensorFlow.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [Projects Overview](#-projects-overview)
 - [Technical Highlights](#-technical-highlights)
 - [Project Details](#-project-details)
@@ -19,7 +19,7 @@ A comprehensive collection of machine learning and deep learning implementations
 
 ---
 
-## 🚀 Projects Overview
+## Projects Overview
 
 | Project | Description | Key Technologies | Performance |
 |---------|-------------|------------------|-------------|
@@ -32,9 +32,8 @@ A comprehensive collection of machine learning and deep learning implementations
 
 ---
 
-## 💡 Technical Highlights
+## Technical Highlights
 
-### Core Competencies Demonstrated
 - ✅ **Algorithm Implementation from Scratch**: Built logistic regression and MLPs using only NumPy, demonstrating deep understanding of fundamental ML mathematics
 - ✅ **Deep Learning Frameworks**: Proficient in PyTorch for building and training neural networks
 - ✅ **Optimization Techniques**: Implemented various optimizers (SGD, Adam), learning rate scheduling, and regularization
@@ -45,7 +44,7 @@ A comprehensive collection of machine learning and deep learning implementations
 
 ---
 
-## 📊 Project Details
+## Project Details
 
 ### 1. Logistic Regression
 **Path**: [`LogisticRegression/`](LogisticRegression/)
@@ -168,7 +167,7 @@ Multimodal deep learning for answering questions about images.
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.8+
@@ -203,7 +202,7 @@ python main.py
 
 ---
 
-## 🏆 Key Achievements
+## Key Achievements
 
 ### Technical Depth
 - **Mathematical Foundations**: Implemented gradient descent, backpropagation, and softmax from scratch
@@ -222,7 +221,7 @@ python main.py
 
 ---
 
-## 🧰 Technologies Used
+## Technologies Used
 
 ### Languages & Frameworks
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -239,7 +238,7 @@ python main.py
 
 ---
 
-## 📈 Future Work
+## Future Work
 
 - [ ] Complete ResNet implementation and benchmark on CIFAR-10
 - [ ] Train PPO agent to convergence on continuous control tasks
@@ -249,13 +248,13 @@ python main.py
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🔗 Connect
+## Connect
 
 Feel free to explore the code, raise issues, or suggest improvements!
 
